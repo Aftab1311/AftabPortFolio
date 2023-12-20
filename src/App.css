@@ -3,62 +3,73 @@
   margin: 0;
   padding: 0;
 }
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding-top: 50px;
+}
 
 .navbar {
+  width: 100%;
+  height: 50px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
-  display: flex;
-  font-size: 1.7rem;
-  height: auto;
   justify-content: space-between;
-  left: 0;
-  padding: 25px 40px 25px 50px;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 200;
+  left: 0;
+  padding: 20px 40px;
+  z-index: 10;
 }
+
+.navbar .logo {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navbar .menu-button {
+  display: none;
+  cursor: pointer;
+  font-size: 3.3rem;
+}
+
 .navbar ul {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
-.navbar ul li  {
- cursor: pointer;
-}
-.navbar ul a {
+.navbar ul li a {
+  cursor: pointer;
   color: #2d2e32;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.23s;
 }
+.navbar ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
 .mobile-nav {
-  align-items: center;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   display: flex;
-  height: 100vh;
   justify-content: center;
-  left: 0;
+  align-items: center;
   position: fixed;
-  text-align: center;
   top: 0;
+  left: 0;
   transition: all 0.3s ease-in-out;
-  width: 100%;
-  z-index: 300;
+  z-index: 1;
+  text-align: center;
 }
-.close-menu {
-  left: -100% !important;
-}
-.mobile-nav span {
-  cursor: pointer;
-  font-size: 3.3rem;
-  position: absolute;
-  right: 4rem;
-  top: 2rem;
-}
+
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
@@ -66,8 +77,147 @@
   gap: 4rem;
   list-style: none;
 }
+
 .mobile-nav ul a {
-  color: #000;
+  color: #2d2e32;
   font-weight: 500;
   text-decoration: none;
+}
+
+.mobile-nav ul a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Media query for screens less than 900px */
+@media screen and (max-width: 900px) {
+  .navbar ul {
+    display: none; /* Hide the desktop menu when the screen width is less than 900px */
+  }
+  .navbar .menu-button {
+    display: block; /* Show the menu button when the screen width is less than 900px */
+  }
+}
+
+.hero {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.container {
+  margin: 0 auto;
+  max-width: 107rem;
+  padding: 0 4rem;
+}
+.content {
+  align-items: center;
+  display: flex;
+  gap: 10rem;
+  height: 35rem;
+  justify-content: center;
+  position: relative;
+}
+.hero-main {
+  align-items: center;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  position: relative;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 32rem;
+  position: relative;
+}
+.hero-text h1 {
+  color: #2d2e32;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.hero-text img {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  right: 6rem;
+  top: 5.8rem;
+}
+.hero-text p {
+  color: #555;
+  font-family: Mulish, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.hero-text span {
+  cursor: pointer;
+  display: flex;
+  gap: 1.4rem;
+  margin: 2.5rem 0;
+}
+.hero-text span a {
+  transition: all 0.2s;
+  color: #2d2e32;
+  font-size: 2rem;
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+}
+100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+}
+.hero-img {
+  -webkit-animation: morph 8s ease-in-out infinite;
+  animation: morph 8s ease-in-out infinite;
+  background-image: url(./aftab2.png); 
+  background-position: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 20rem;
+  position: relative;
+  transition: all 2s ease-in-out;
+  width: 20rem;
+}
+.skills {
+  align-items: center;
+  bottom: 0;
+  color: #767676;
+  display: flex;
+  font-size: 1.4rem;
+  left: 0;
+  position: absolute;
+}
+.skills p {
+  border-right: 2px solid rgba(45, 46, 50, 0.5);
+  color: #2d2e32;
+  font-family: Mulish, sans-serif;
+  font-weight: 600;
+  margin-right: 7rem;
+  padding-right: 2rem;
+}
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  list-style: none;
+}
+.skills ul li {
+  cursor: pointer;
+}
+.skills ul li img {
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+  width: 8rem;
 }

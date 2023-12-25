@@ -447,7 +447,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="project4">
+            <div className="project4 reversed-proj">
               <div class="pro__img">
                 <a
                   target="_blank"

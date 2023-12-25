@@ -294,7 +294,7 @@
   width:100%;
   height: auto;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
   .img_side .img-side__main-img {
     margin: 0px 50px;
     border-radius: 1.7rem;

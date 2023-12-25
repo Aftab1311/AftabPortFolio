@@ -487,7 +487,6 @@
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: auto;
   background-color: #fff;
@@ -496,7 +495,7 @@
 
 .contact .title p {
   color: #147efb;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -545,6 +544,64 @@ a {
   font-size: 1.2rem;
   text-decoration: none;
 }
+@media screen and (max-width:1024px){
+.contact{
+  padding: 2rem 20rem;
+}
+  .contact .title p{
+ align-items: flex-start;
+}
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    padding: 2rem 2rem;
+  }
+  .contact .title p {
+    align-items: flex-start;
+  }
+  .contact .icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .icons .contact__icon-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #147efb;
+    height: 3rem;
+    width: 3rem;
+  }
+  .contact__icon-box {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .contact__info h3 {
+    color: #2d2e32;
+    font-size: 1.5rem;
+  }
+  .contact__info p,
+  a {
+    color: #767676;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+}
+
 
 footer {
   background-color: #2d2e32;
@@ -578,4 +635,31 @@ footer h3 {
 .footerc__socials a {
   color: #fff;
   font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .footerc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 4rem;
+  }
+  footer h3 {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .footerc__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+  .footerc__socials a {
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  
 }
